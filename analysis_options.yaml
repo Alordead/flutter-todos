@@ -10,6 +10,7 @@ analyzer:
     unnecessary_import: warning
     duplicate_import: warning
     unused_local_variable: warning
+    invalid_annotation_target: ignore
 
 linter:
   rules:
@@ -66,7 +67,6 @@ dart_code_metrics:
     - avoid-nested-conditional-expressions:
       acceptable-level: 2
     - avoid-non-null-assertion
-    - avoid-throw-in-catch-block
     - avoid-unnecessary-type-assertions
     - avoid-unnecessary-type-casts
     - avoid-unused-parameters
@@ -85,6 +85,5 @@ dart_code_metrics:
     - avoid-unnecessary-setstate
     - avoid-wrapping-in-padding
     - prefer-const-border-radius
-    - prefer-match-file-name 
     - prefer-single-widget-per-file:
       ignore-private-widgets: true 
