@@ -1,16 +1,20 @@
-# flutter_todos
+### Todos App
+> **Alexander Popov's Showcase**
 
-A new Flutter project.
+This is a simple implementation of TODO list. The tasks are coming from public API and saving in the store.
 
-## Getting Started
+**Link to download**: [Tap Here](https://github.com/Alordead/flutter-todos/releases/tag/v0.1.0).
 
-This project is a starting point for a Flutter application.
+**Highlights**:
 
-A few resources to get you started if this is your first Flutter project:
+- [x] Clean architecture with strong layers separation
+- [x] Rest API using custom HTTP Client
+- [x] Custom navigation based on Navigator 2.0
+- [x] UI Kit package
+- [x] Widget and Unit tests
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| All Tasks  | Add Task |
+| ------------- | ------------- |
+| <img src="https://github.com/Alordead/flutter-todos/assets/43294536/242bbdc0-879d-49f9-9508-25e8ded12809" width="300">  | <img src="https://github.com/Alordead/flutter-todos/assets/43294536/e8a6f527-7873-4b3a-9363-b7bf30deab56" width="300">  |
