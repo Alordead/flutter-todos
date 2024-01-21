@@ -1,0 +1,89 @@
+analyzer:
+  plugins:
+    - dart_code_metrics
+  exclude:
+    - lib/**/*.g.dart
+    - lib/**/*.gen.dart
+    - lib/generated_plugin_registrant.dart
+  errors:
+    unused_import: warning
+    unnecessary_import: warning
+    duplicate_import: warning
+    unused_local_variable: warning
+    invalid_annotation_target: ignore
+
+linter:
+  rules:
+    always_declare_return_types: true
+    always_put_required_named_parameters_first: true
+    annotate_overrides: true
+    avoid_annotating_with_dynamic: true
+    avoid_positional_boolean_parameters: true
+    avoid_print: true
+    avoid_returning_null_for_future: true
+    avoid_unnecessary_containers: true
+    avoid_void_async: true
+    avoid_web_libraries_in_flutter: true
+    camel_case_types: true
+    cancel_subscriptions: true
+    constant_identifier_names: true
+    curly_braces_in_flow_control_structures: true
+    discarded_futures: true
+    empty_catches: true
+    eol_at_end_of_file: true
+    file_names: true
+    flutter_style_todos: true
+    only_throw_errors: true
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    prefer_final_fields: true
+    prefer_final_locals: true
+    prefer_generic_function_type_aliases: true
+    prefer_if_null_operators: true
+    prefer_single_quotes: true
+    prefer_typing_uninitialized_variables: true
+    require_trailing_commas: true
+    sized_box_for_whitespace: true
+    sort_constructors_first: true
+    unawaited_futures: true
+    unnecessary_await_in_return: true
+    unnecessary_const: true
+    use_build_context_synchronously: true
+    use_decorated_box: true
+
+dart_code_metrics:
+  anti-patterns:
+    - long-method
+    - long-parameter-list
+  metrics:
+    cyclomatic-complexity: 20
+    maximum-nesting: 5
+  metrics-exclude:
+    - lib/**/*.g.dart
+  rules:
+    # Dart
+    - avoid-ignoring-return-values
+    - avoid-missing-enum-constant-in-map
+    - avoid-nested-conditional-expressions:
+      acceptable-level: 2
+    - avoid-non-null-assertion
+    - avoid-unnecessary-type-assertions
+    - avoid-unnecessary-type-casts
+    - avoid-unused-parameters
+    - binary-expression-operand-order
+    - newline-before-return
+    - no-boolean-literal-compare
+    - no-empty-block
+    - no-equal-then-else
+    - no-object-declaration
+    - prefer-conditional-expressions
+    - prefer-trailing-comma
+
+    # Flutter
+    - always-remove-listener
+    - avoid-returning-widgets
+    - avoid-unnecessary-setstate
+    - avoid-wrapping-in-padding
+    - prefer-const-border-radius
+    - prefer-single-widget-per-file:
+      ignore-private-widgets: true 

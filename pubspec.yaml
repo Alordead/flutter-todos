@@ -1,0 +1,52 @@
+name: flutter_todos
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  network:
+    git: 
+      url: git@github.com:Alordead/flutter-network.git
+      tag: v0.1.0
+  routing:
+    git: 
+      url: git@github.com:Alordead/flutter-routing.git
+      tag: v0.1.0
+  di:
+    git: 
+      url: git@github.com:Alordead/flutter-di.git
+      tag: v0.1.0
+  
+  ui_kit:
+    path: packages/ui_kit
+  
+  freezed_annotation: ^2.4.1
+  flutter_riverpod: ^1.0.3
+  collection: ^1.17.2
+  easy_localization: ^3.0.1
+
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  dart_code_metrics: ^5.7.0
+
+  build_runner: ^2.4.8
+  freezed: ^2.4.6
+  json_serializable: ^6.5.4
+  mocktail: ^0.3.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/translations/
