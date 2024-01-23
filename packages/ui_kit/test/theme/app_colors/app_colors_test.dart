@@ -63,9 +63,8 @@ class _ColorBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 64.0,
-      width: 64.0,
+    return SizedBox.square(
+      dimension: 64.0,
       child: DecoratedBox(
         decoration: BoxDecoration(
           color: color,

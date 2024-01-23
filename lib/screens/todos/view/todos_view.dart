@@ -52,11 +52,11 @@ class TodosView extends View<ITodosViewModel, TodosViewModel, ITodosViewState,
             return state.when(
               initial: _TodosViewInitial.new,
               loading: _TodosViewLoading.new,
+              error: _TodosViewError.new,
               fulfilled: (todos) => _TodosViewFulfilled(
                 todos: todos,
                 onTodoEntitySelected: viewModel.onUpdateTodoTap,
               ),
-              error: _TodosViewError.new,
             );
           },
         ),

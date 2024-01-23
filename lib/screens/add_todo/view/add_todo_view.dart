@@ -3,7 +3,6 @@ import 'package:flutter/material.dart' hide View;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_todos/generated/locale_keys.g.dart';
 import 'package:routing/routing.dart';
-import 'package:ui_kit/ui_kit.dart';
 
 import '../view_model/add_todo_view_model.dart';
 import '../view_model/i_add_todo_view_model.dart';
