@@ -1,13 +1,14 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mocktail/mocktail.dart';
+
 import 'package:flutter_todos/api/api_interfaces.dart';
 import 'package:flutter_todos/entities/entities.dart';
 import 'package:flutter_todos/repositories/repository_implementations.dart';
 import 'package:flutter_todos/stores/store_interfaces.dart';
-import 'package:mocktail/mocktail.dart';
 
-class MockTodosApi extends Mock implements ITodosApi {}
+class _MockTodosApi extends Mock implements ITodosApi {}
 
-class MockTodosStore extends Mock implements ITodosStore {}
+class _MockTodosStore extends Mock implements ITodosStore {}
 
 void main() {
   group('TodosRepository', () {
@@ -17,8 +18,8 @@ void main() {
     late ITodosStore todosStore;
 
     setUp(() {
-      todosApi = MockTodosApi();
-      todosStore = MockTodosStore();
+      todosApi = _MockTodosApi();
+      todosStore = _MockTodosStore();
 
       todosRepository = TodosRepository(
         todosApi: todosApi,
@@ -134,7 +135,7 @@ void main() {
     group('getTodos', () {
       test(
         'getTodos',
-        () async {
+        () {
           const todos = [
             TodoEntity(
               id: 1,
@@ -186,7 +187,7 @@ void main() {
         'when todosApi.fetchTodos throws exception',
         () async {
           when(() => todosApi.fetchTodos())
-              .thenThrow((_) async => Exception('Exception'));
+              .thenThrow((_) => Exception('Exception'));
 
           final result = await todosRepository.refreshTodos();
 

@@ -31,6 +31,20 @@ class TodosViewModel extends ViewModel<ITodosViewState, TodosViewState>
   }
 
   @override
+  Future<void> onUpdateTodoTap({
+    required TodoEntity todo,
+    required bool? isCompleted,
+  }) async {
+    final updatedTodo = todo.copyWith(
+      isCompleted: isCompleted ?? todo.isCompleted,
+    );
+
+    _todosRepository.updateTodo(todo: updatedTodo);
+
+    _updateFulfilledState();
+  }
+
+  @override
   Future<void> onRefreshRequested() {
     return _loadTodos();
   }
@@ -47,20 +61,6 @@ class TodosViewModel extends ViewModel<ITodosViewState, TodosViewState>
         message: 'Could not load todos',
       );
     }
-  }
-
-  @override
-  Future<void> onUpdateTodoTap({
-    required TodoEntity todo,
-    required bool? isCompleted,
-  }) async {
-    final updatedTodo = todo.copyWith(
-      isCompleted: isCompleted ?? todo.isCompleted,
-    );
-
-    _todosRepository.updateTodo(todo: updatedTodo);
-
-    _updateFulfilledState();
   }
 
   void _updateFulfilledState() {

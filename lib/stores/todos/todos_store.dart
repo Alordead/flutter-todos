@@ -26,6 +26,7 @@ final class TodosStore extends StateNotifier<TodosStoreState>
   void updateTodo(TodoEntity todo) {
     final todos = List<TodoEntity>.from(state.todos);
     final index = todos.indexWhere((t) => t.id == todo.id);
+    
     if (index != -1) {
       todos[index] = todo;
     }

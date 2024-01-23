@@ -48,7 +48,7 @@ abstract final class Startup {
     );
 
     // Routing
-    final AppRouter appRouter = RoutingSetup(
+    final AppRouter appRouter = const RoutingSetup(
       diContainer: diContainer,
     ).setupAppRouter();
 
